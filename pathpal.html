@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Path Pal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1 id="title" aria-label="Path Pal Navigation Assistant">Path Pal</h1>
+
+    <!-- Train Status -->
+    <section>
+      <label for="train" aria-label="Enter train number">Train Number:</label>
+      <input type="text" id="train" placeholder="e.g., 12723" />
+      <button onclick="getTrainStatus()">Check Train Status</button>
+      <p id="trainStatus" aria-live="polite"></p>
+    </section>
+
+    <!-- Navigation -->
+    <section>
+      <label for="destination" aria-label="Enter destination">Destination:</label>
+      <input type="text" id="destination" placeholder="e.g., Hyderabad Station" />
+      <button onclick="navigate()">Navigate</button>
+    </section>
+
+    <!-- Emotion-based Music -->
+    <section>
+      <label for="emotion" aria-label="Select your emotion">Your Emotion:</label>
+      <select id="emotion">
+        <option value="happy">😊 Happy</option>
+        <option value="sad">😢 Sad</option>
+        <option value="angry">😠 Angry</option>
+      </select>
+      <button onclick="playMusic()">Play Music</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
